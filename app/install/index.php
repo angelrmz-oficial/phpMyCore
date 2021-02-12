@@ -5,7 +5,7 @@ define('system_app', true);
 require '../../init.php';
 
 if($app['pmc']['installed'] == true):
-	header("Location: ". site_url . "/app/system/");
+	header("Location: ". site_url . "/index.php");
 endif;
 
 if(isset($_SESSION['step'])):
@@ -18,7 +18,7 @@ $page['title']="phpMyCore | ". site_name;
 <!DOCTYPE HTML>
 <html>
 <style>
-html {height:100%} 
+html {height:100%}
 body {min-height:100%}
 </style>
 <?php require 'head.php'; ?>
