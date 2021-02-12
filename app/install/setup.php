@@ -5,7 +5,7 @@ define('system_app', true);
 require '../../init.php';
 
 if($app['pmc']['installed'] == true):
-	header("Location: ". site_url . "/app/system/");
+	header("Location: ". site_url . "/index.php");
 endif;
 
 if(!isset($_SESSION['step'])):
@@ -39,9 +39,9 @@ switch($step):
 		$buttonLink="goto.php?step=3";//goto 3.
 		$buttonText="Back to Step 3";
 	break;
-	
+
 	default:
-		$title="Installation failed!"; //delete install?? 
+		$title="Installation failed!"; //delete install??
 		$buttonLink="unset.php";
 		$buttonText="Reset";
 	break;
@@ -49,7 +49,7 @@ switch($step):
 endswitch;
 
 /*step 1
-	Step 1: Admin User | Web Manager 
+	Step 1: Admin User | Web Manager
 */
 $page['title']="phpMyCore | ". site_name;
 //require 'head.php';
@@ -70,7 +70,7 @@ $page['title']="phpMyCore | ". site_name;
 <script src="./js/modernizr-1.5.min.js" type="text/javascript"></script>
 <script src="./js/jquery-1.6.3.min.js" type="text/javascript"></script>
 <style>
-html {height:100%} 
+html {height:100%}
 body {min-height:100%}
 </style>
 </head>
@@ -120,7 +120,7 @@ body {min-height:100%}
 														<label>Confirm Password*</label>
 														<input name="confirm" type="password" class="required"/>
 												</p>
-												
+
 												<p>
 														<div class="button_1" style="margin-left: 145px;"><a onclick="$('#form').submit()">Continue</a></div>
 												</p>
@@ -138,8 +138,8 @@ body {min-height:100%}
 								<form  class="contact_form" id="step2" method="post" action="">
 										<fieldset>
 										<p>
-														<label>Name*</label>
-														<input type="text" name="site_name" value="<?= $app['settings']['site_name']; ?>"/>
+														<label>Proyect Name*</label>
+														<input type="text" name="site_name" value="My First Proyect"/>
 												</p>
 												<p>
 														<label>Theme*</label>
@@ -147,17 +147,17 @@ body {min-height:100%}
 												</p>
 												<p>
 														<label>URL*</label>
-														<input name="site_url" type="text" value="<?= $app['settings']['site_url']; ?>" class="required"/>
+														<input name="site_url" type="text" value="<?= $current_url; ?>" class="required"/>
 												</p>
 
 												<p>
 														<label>Web API*</label>
-														<input name="site_api" type="text" value="<?= $app['settings']['site_api']; ?>" class="required"/>
+														<input name="site_api" type="text" value="<?= "{$current_url}/api"; ?>" class="required"/>
 												</p>
 
 												<p>
 														<label>Web Services*</label>
-														<input name="site_ws" type="text" value="<?= $app['settings']['site_ws']; ?>" class="required"/>
+														<input name="site_ws" type="text" value="<?= "{$current_url}/ws"; ?>" class="required"/>
 												</p>
 
 												<p>
