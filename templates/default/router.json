@@ -1,0 +1,32 @@
+{
+  "index":
+  {
+    "id":0,
+    "subtitle":"Index",
+    "submenu":"",
+    "subid":0,
+    "session":false,
+    "permission":"",
+    "view":"index"
+  },
+  "dashboard":
+  {
+    "id":1,
+    "subtitle":"Home",
+    "submenu":"",
+    "subid":0,
+    "session":true,
+    "permission":"",
+    "view":"pages"
+  },
+  "default":
+  {
+    "id":0,
+    "subtitle":"Error 404",
+    "submenu":"",
+    "subid":2,
+    "session":false,
+    "permission":"",
+    "view":"404"
+  }
+}
