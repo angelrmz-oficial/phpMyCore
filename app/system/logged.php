@@ -3,7 +3,7 @@ define('system_app', true);
 require '../../init.php';
 
 if($app['pmc']['installed'] == false):
-	header("Location: ". site_url . "/app/install/");
+	header("Location: ". $current_url . "/app/install/");
 endif;
 
 if(!isset($_SESSION['app']))

@@ -3,7 +3,7 @@
 if(!defined('system_webscr') && basename($_SERVER['PHP_SELF']) == basename(__FILE__)) die('<h3>¡Acceso denegado!</h3>');
 
 if($app['pmc']['installed'] == false && !defined('system_app')):
-    header("Location: ".site_url . "/app/install/");
+    header("Location: ". $current_url . "/app/install/");
 elseif(site_redirect && site_url !== $current_url && !defined('system_app')):
     header("Location: ".site_url . $_SERVER['REQUEST_URI']);
     //redirct($_SERVER['REQUEST_URI']);
